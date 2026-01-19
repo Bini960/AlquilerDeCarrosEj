@@ -17,17 +17,29 @@ public class LugarAlquiler implements Interface {
     }
 
     @Override
-    public void agregarCarro() {
-        // lógica futura
+    public void agregarCarro(Carro carro) {
+        if (carro == null || carro.getPlaca() == null) {
+            return;
+        }
+        for (Carro existente : inventario) {
+            if (carro.getPlaca().equals(existente.getPlaca())) {
+                return;
+            }
+        }
+        inventario.add(carro);
     }
 
     @Override
-    public void agendarCarro() {
-        // lógica futura
-    }
-
-    public void agregarCarro(Carro carro) {
-        inventario.add(carro);
+    public void agendarCarro(String placa) {
+        if (placa == null) {
+            return;
+        }
+        for (Carro existente : inventario) {
+            if (placa.equals(existente.getPlaca())) {
+                existente.setDisponibilidad(false);
+                return;
+            }
+        }
     }
 
     public List<Carro> getInventario() {
