@@ -29,4 +29,8 @@ public class LugarAlquiler implements Interface {
     public void agregarCarro(Carro carro) {
         inventario.add(carro);
     }
+
+    public List<Carro> getInventario() {
+        return this.inventario;
+    }
 }

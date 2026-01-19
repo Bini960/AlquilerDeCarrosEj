@@ -1,13 +1,18 @@
+import org.junit.Test;
+import static org.junit.Assert.*;
+
 public class TestAgendarCarro {
 
+    @Test
     public void testCambioDeDisponibilidad() {
-        //Crea un carro disponible
+
+        // Constructor
         Carro carro = new Carro("Mazda", "3", "P-999", 2023, "Sedan", true);
 
-        //Ejecutar la acción 
+        // Ejecuta el método que cambia el estado
         carro.agendarCarro();
 
-        //Verificar que la disponibilidad ahora sea false
-        assert carro.getDisponibilidad() == false;
+        // Verificación
+        assertFalse("El carro debería estar ocupado ahora", carro.getDisponibilidad());
     }
 }
