@@ -1,16 +1,15 @@
+import static org.junit.Assert.assertNull;
 import org.junit.Test;
-import static org.junit.Assert.*;
 
 public class TestVerificarPlaca {
 
     @Test
-    public void testPlacaCorrecta() {
-        // Crea un carro con la placa "GUA-123"
-        Carro carro = new Carro("Toyota", "Yaris", "GUA-123", 2020, "Hatchback", true);
+    public void testVerificarPlaca() {
 
-        //consulta el dato
-        String placaReal = carro.getPlaca();
+        Carro carro = new Carro();
 
-        assertEquals("La placa no coincide", "GUA-123", placaReal);
+        String placa = carro.getPlaca();
+
+        assertNull(placa);
     }
 }

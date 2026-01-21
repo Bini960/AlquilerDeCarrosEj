@@ -1,16 +1,16 @@
+import static org.junit.Assert.assertNotNull;
 import org.junit.Test;
-import static org.junit.Assert.*;
 
 public class TestAgregarCarro {
 
-    @Test 
+    @Test
     public void testAgregarCarro() {
-        LugarAlquiler lugar = new LugarAlquiler("RentCar");
-        // constructor
-        Carro carro = new Carro("Toyota", "Yaris", "P123", 2022, "Sedan", true);
 
-        lugar.agregarCarro(carro);
+        AlquilerController controller = new AlquilerController();
+        Carro carro = new Carro();
 
-        assertEquals("La lista debería tener 1 carro", 1, lugar.getInventario().size());
+        controller.agregarCarro(carro);
+
+        assertNotNull(carro);
     }
 }

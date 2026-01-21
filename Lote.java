@@ -1,26 +1,23 @@
 public class Lote {
 
-    private boolean disponibilidad;
+    private int numeroLote;
     private String estado;
+    private Carro carroEstacionado;
 
-    public Lote(boolean disponibilidad, String estado) {
-        this.disponibilidad = disponibilidad;
-        this.estado = estado;
+    public Lote() {
+        System.out.println("Lote creado");
     }
 
-    public boolean isDisponibilidad() {
-        return disponibilidad;
+    public void estacionarCarro(Carro c) {
+        System.out.println("Carro estacionado en el lote");
     }
 
-    public void setDisponibilidad(boolean disponibilidad) {
-        this.disponibilidad = disponibilidad;
+    public void liberarLote() {
+        System.out.println("Lote liberado");
     }
 
-    public String getEstado() {
-        return estado;
-    }
-
-    public void setEstado(String estado) {
-        this.estado = estado;
+    public boolean estaOcupado() {
+        System.out.println("Verificando si el lote está ocupado");
+        return false;
     }
 }

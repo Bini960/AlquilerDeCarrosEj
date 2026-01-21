@@ -5,32 +5,19 @@ public class Alquiler {
     private String fecha;
     private float precio;
     private int diasDeRenta;
+    private Carro carroRentado;
 
-    public Alquiler(String nombreCliente, int CUI, String fecha, float precio, int diasDeRenta) {
-        this.nombreCliente = nombreCliente;
-        this.CUI = CUI;
-        this.fecha = fecha;
-        this.precio = precio;
-        this.diasDeRenta = diasDeRenta;
+    public Alquiler() {
+        System.out.println("Alquiler creado");
     }
 
-    public String getNombreCliente() {
-        return nombreCliente;
+    public String getDetalles() {
+        System.out.println("Mostrando detalles del alquiler");
+        return "Detalles del alquiler";
     }
 
-    public int getCUI() {
-        return CUI;
-    }
-
-    public String getFecha() {
-        return fecha;
-    }
-
-    public float getPrecio() {
-        return precio;
-    }
-
-    public int getDiasDeRenta() {
-        return diasDeRenta;
+    public Carro getCarroRentado() {
+        System.out.println("Obteniendo carro rentado");
+        return carroRentado;
     }
 }

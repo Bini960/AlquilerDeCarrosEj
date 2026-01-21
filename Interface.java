@@ -1,6 +1,6 @@
 public interface Interface {
 
-    boolean iniciar();
+    boolean Iniciar();
     void agregarCarro();
     void agendarCarro();
 }

@@ -2,18 +2,10 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Carro carro = new Carro(
-                "Toyota",
-                "Corolla",
-                "P-123ABC",
-                2022,
-                "Sedan",
-                true
-        );
+        Vista vista = new Vista();
+        AlquilerController controller = new AlquilerController();
 
-        LugarAlquiler lugar = new LugarAlquiler("RentCar UVG");
-        lugar.agregarCarro(carro);
-
-        System.out.println("Sistema iniciado correctamente");
+        System.out.println("Programa principal iniciado");
+        controller.Iniciar();
     }
 }
