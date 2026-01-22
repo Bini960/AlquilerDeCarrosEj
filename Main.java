@@ -1,11 +1,11 @@
 public class Main {
 
     public static void main(String[] args) {
+        System.out.println("Sistema de Alquiler de Carros iniciado");
 
-        Vista vista = new Vista();
-        AlquilerController controller = new AlquilerController();
+        CarroController controller = new CarroController();
+        CarroView view = new CarroView();
 
-        System.out.println("Programa principal iniciado");
-        controller.Iniciar();
+        view.mostrarMensaje("Bienvenido al sistema");
     }
 }
