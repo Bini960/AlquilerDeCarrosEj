@@ -9,23 +9,31 @@ public class CarroController implements InterfaceGestionCarro {
 
     @Override
     public void agregarCarro(Carro carro) {
-        System.out.println("agregarCarro()");
         listaCarros.add(carro);
     }
 
     @Override
     public List<Carro> listarCarrosDisponibles() {
-        System.out.println("listarCarrosDisponibles()");
-        return listaCarros;
+        List<Carro> disponibles = new ArrayList<>();
+
+        for (Carro carro : listaCarros) {
+            if (carro.isDisponible()) {
+                disponibles.add(carro);
+            }
+        }
+        return disponibles;
+    }
+
+    public Carro buscarCarro(int id) {
+        for (Carro carro : listaCarros) {
+            if (carro.getId() == id) {
+                return carro;
+            }
+        }
+        return null;
     }
 
     public void agendarCarro(int idCarro, Cliente cliente,
                              LocalDate fechaInicio, LocalDate fechaFin) {
-        System.out.println("agendarCarro()");
-    }
-
-    public Carro buscarCarro(int id) {
-        System.out.println("buscarCarro()");
-        return null;
     }
 }
